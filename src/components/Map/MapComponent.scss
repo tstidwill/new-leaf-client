@@ -1,0 +1,12 @@
+@use "../../styles/partials/variables" as *;
+
+.map-container {
+  text-align: center;
+  height: 35rem;
+  width: 100%;
+  background-color: $secondary-light;
+}
+.marker {
+  width: 40px;
+  height: 40px;
+}

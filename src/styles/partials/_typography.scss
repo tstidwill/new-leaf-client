@@ -1,0 +1,29 @@
+@use "./variables" as *;
+
+@font-face {
+  font-family: $font-family;
+  src: url("/assets/fonts/Sen-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-family;
+  src: url("/assets/fonts/Sen-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-family;
+  src: url("/assets/fonts/Sen-Bold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $special-font;
+  src: url("/assets/fonts/Marmelad-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}

@@ -1,0 +1,130 @@
+@use "../partials/_mixins" as *;
+@use "../partials/_variables" as *;
+@use "../partials/_typography" as *;
+
+* {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  color: $primary-dark;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 2.75rem;
+
+  @include tablet {
+    font-size: 3rem;
+    line-height: 3.25rem;
+  }
+
+  @include desktop {
+    font-size: 4rem;
+    line-height: 4.25rem;
+  }
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 2.75rem;
+  line-height: 2.5rem;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.25rem;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+
+  @include tablet {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+
+  @include desktop {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1rem;
+
+  @include tablet {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+
+  @include desktop {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+}
+h6 {
+  font-family: $special-font;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+
+  @include desktop {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+p {
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 1.25rem;
+}
+
+ul,
+li {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  word-wrap: break-word;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+::placeholder {
+  color: $secondary-dark;
+}
+
+.logo {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.button--round {
+  width: 10rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  background-color: $primary-dark;
+}
+.button--square {
+  background-color: $primary-dark;
+  height: 3rem;
+  color: $primary-light;
+  font-family: $font-family;
+  border: none;
+  font-size: 1rem;
+}

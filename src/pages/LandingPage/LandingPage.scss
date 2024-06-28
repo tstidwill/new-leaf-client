@@ -1,0 +1,302 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.landingpage {
+  background-color: $primary-light;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__body {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      height: 95vh;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  height: 10vh;
+  justify-content: space-between;
+  align-items: center;
+
+  @include tablet {
+    height: 5vh;
+    padding: 0.75rem 1.5rem;
+    border-bottom: 1px solid $primary-dark;
+  }
+
+  &__logo {
+    margin-left: 0.5rem;
+
+    @include tablet {
+      margin-left: 0;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      width: 30%;
+    }
+  }
+
+  &__navlink {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      font-weight: bold;
+    }
+    &:visited {
+      color: $primary-dark;
+    }
+  }
+}
+
+.hero {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+
+  @include tablet {
+    flex-direction: row;
+    position: relative;
+    padding: 0;
+  }
+
+  &__text-side {
+    width: 100%;
+
+    @include tablet {
+      padding-left: 2rem;
+      width: 40%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 5rem;
+  }
+
+  &__title {
+    text-align: center;
+    @include tablet {
+      text-align: left;
+    }
+  }
+
+  &__subheader {
+    display: flex;
+    justify-content: center;
+    color: $primary-midtone;
+    position: relative;
+    top: 14px;
+    right: 60px;
+
+    @include tablet {
+      justify-content: flex-start;
+      top: 5px;
+      right: 0px;
+    }
+
+    @include desktop {
+      bottom: 50px;
+      left: -35px;
+    }
+  }
+
+  &__cta {
+    text-align: center;
+    min-width: 80%;
+
+    @include tablet {
+      text-align: left;
+    }
+  }
+
+  &__caption {
+    font-weight: 600;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet {
+      align-items: flex-start;
+    }
+  }
+
+  &__input {
+    border: 1.5px solid $primary-midtone;
+    border-radius: 50px;
+    height: 2rem;
+    padding: 0.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    color: $primary-dark;
+    font-size: 0.7rem;
+    width: 100%;
+
+    @include tablet {
+      display: none;
+    }
+
+    @include desktop {
+      margin-top: 1.5rem;
+      max-width: 30rem;
+      font-size: 1rem;
+    }
+
+    &::placeholder {
+      text-align: center;
+      color: $primary-midtone;
+      font-family: $font-family;
+      font-size: 0.7rem;
+
+      @include desktop {
+        font-size: 0.8rem;
+      }
+    }
+
+    &:focus {
+      border: 1px solid $primary-dark;
+      outline: none;
+    }
+
+    &--error {
+      animation: shake 0.3s ease;
+    }
+  }
+
+  &__error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    height: 1.4rem;
+    color: $primary-midtone;
+  }
+
+  &__button {
+    width: 100%;
+
+    @include tablet {
+      display: none;
+    }
+
+    &--tablet {
+      display: none;
+
+      @include tablet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1.5rem;
+        font-family: $special-font;
+        font-size: 0.85rem;
+        width: 6rem;
+      }
+    }
+  }
+
+  &__image-side {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      width: 60%;
+      height: 100%;
+      min-height: 30rem;
+    }
+  }
+
+  &__image-container {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      height: 80%;
+      width: 50%;
+      position: absolute;
+      bottom: 0;
+      right: 2rem;
+    }
+  }
+
+  &__image {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      overflow: hidden;
+      object-fit: cover;
+    }
+  }
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+.upcoming {
+  display: none;
+  background-color: $secondary-light;
+  color: $primary-dark;
+  height: 20rem;
+
+  @include tablet {
+    display: flex;
+    width: 100%;
+  }
+  &__header {
+    padding: 1rem;
+  }
+}
+
+.mission {
+  display: none;
+  background-color: $primary-dark;
+  color: $primary-light;
+  height: 20rem;
+
+  @include tablet {
+    display: flex;
+  }
+  &__header {
+    padding: 1rem;
+  }
+}

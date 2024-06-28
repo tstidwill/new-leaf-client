@@ -1,0 +1,45 @@
+@use "../../styles/partials/variables.scss" as *;
+
+.footer {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  background-color: $primary-light;
+
+  &__logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__logocontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    text-decoration: none;
+
+    &:visited {
+      color: $primary-dark;
+    }
+    &:active {
+      font-style: 800;
+      color: $primary-dark;
+    }
+  }
+}
+.earthicon {
+  width: 35px;
+  height: 35x;
+  margin: 2.5px;
+}
+.calendaricon {
+  width: 40px;
+  height: 40px;
+}

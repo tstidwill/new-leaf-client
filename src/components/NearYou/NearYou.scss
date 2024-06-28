@@ -1,0 +1,57 @@
+@use "../../styles/partials/variables" as *;
+
+.nearyou {
+  &__header {
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  &__card {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 2rem 0;
+    height: 22rem;
+    background-color: $secondary-light;
+
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+  }
+
+  &__imagecontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    overflow: hidden;
+  }
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+
+  &__address {
+    font-weight: 600;
+  }
+  &__button {
+    display: flex;
+    font-size: 0.8rem;
+    background-color: $primary-dark;
+    color: white;
+    width: 10rem;
+    height: 2.25rem;
+    margin-top: 0.75rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
