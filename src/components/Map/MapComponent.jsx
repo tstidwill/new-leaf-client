@@ -69,11 +69,11 @@ export default function MapComponent({ submittedPostalCode, selectedType }) {
       if (response.data.length > 0) {
         const filteredShops = response.data.filter((shop) => {
           const latWithinRange =
-            shop.lat >= coordinates.lat - 0.01 &&
-            shop.lat <= coordinates.lat + 0.01;
+            shop.lat >= coordinates.lat - 0.1 &&
+            shop.lat <= coordinates.lat + 0.1;
           const lngWithinRange =
-            shop.lng >= coordinates.lng - 0.01 &&
-            shop.lng <= coordinates.lng + 0.01;
+            shop.lng >= coordinates.lng - 0.1 &&
+            shop.lng <= coordinates.lng + 0.1;
 
           const typeMatch =
             selectedType === "view_all" || shop.type === selectedType;
