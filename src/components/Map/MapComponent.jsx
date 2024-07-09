@@ -137,7 +137,7 @@ export default function MapComponent({ submittedPostalCode, selectedType }) {
           <Map
             className="map-container"
             center={{ lat: coordinates.lat, lng: coordinates.lng }}
-            defaultZoom={14}
+            defaultZoom={10}
             mapId={MAP_ID}
           >
             {leaves &&
