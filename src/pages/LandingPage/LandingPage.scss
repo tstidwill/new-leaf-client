@@ -48,11 +48,15 @@
     border-bottom: 1px solid $primary-dark;
   }
 
+  @include desktop {
+    padding: 0.75rem 5rem;
+  }
+
   &__logo {
     margin-left: 0.5rem;
 
     @include tablet {
-      margin-left: 0;
+      margin-left: 0rem;
     }
   }
 
@@ -102,6 +106,10 @@
       flex-direction: column;
       justify-content: space-around;
     }
+
+    @include desktop {
+      padding-left: 5rem;
+    }
   }
 
   &__header {
@@ -113,6 +121,7 @@
 
   &__title {
     text-align: center;
+
     @include tablet {
       text-align: left;
     }
@@ -134,6 +143,9 @@
 
     @include desktop {
       bottom: 50px;
+      color: $primary-dark;
+      font-size: 3rem;
+      // line-height: 4.25rem;
     }
   }
 
@@ -279,23 +291,49 @@ input:focus::placeholder {
 
   @include tablet {
     display: flex;
+    flex-direction: column;
     width: 100%;
   }
   &__header {
     padding: 1rem;
+
+    @include desktop {
+      padding: 3rem 5rem 0rem;
+    }
+  }
+
+  &__container {
+    border: 1px solid $primary-light;
+    padding: 5rem;
+    margin: 2rem 5rem;
   }
 }
 
 .mission {
   display: none;
-  background-color: $primary-dark;
-  color: $primary-light;
+  background-color: $primary-light;
+  color: $primary-dark;
   height: 20rem;
 
   @include tablet {
     display: flex;
+    flex-direction: column;
   }
   &__header {
     padding: 1rem;
+
+    @include desktop {
+      padding: 3rem 5rem;
+    }
   }
+
+  &__text {
+    margin: 1rem 5rem;
+    width: 40%;
+  }
+}
+
+.footer {
+  height: 5vh;
+  background-color: $primary-dark;
 }

@@ -94,11 +94,18 @@ export default function LandingPage({
           </section>
           <section className="landingpage__upcoming upcoming">
             <h2 className="upcoming__header">Upcoming Events</h2>
+            <div className="upcoming__container"></div>
           </section>
           <section className="landingpage__mission mission">
             <h2 className="mission__header">Mission</h2>
+            <p className="mission__text">
+              New Leaf was created by Tara Stidwill as a Capstone Project for
+              BrainStation's Software Engineering Bootcamp aimed at making
+              sustainable living the norm.{" "}
+            </p>
           </section>
         </div>
+        <footer className="footer">login register</footer>
       </main>
     </>
   );

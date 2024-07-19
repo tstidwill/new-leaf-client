@@ -24,8 +24,8 @@ h1 {
   }
 
   @include desktop {
-    font-size: 4rem;
-    line-height: 4.25rem;
+    font-size: 3.5rem;
+    line-height: 4rem;
   }
 }
 
@@ -88,6 +88,11 @@ p {
   font-weight: 400;
   font-size: 0.85rem;
   line-height: 1.25rem;
+
+  @include desktop {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
 }
 
 ul,
