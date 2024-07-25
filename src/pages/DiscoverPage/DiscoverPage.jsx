@@ -1,8 +1,8 @@
 import "./DiscoverPage.scss";
-import Footer from "../../components/Footer/Footer";
 import DiscoverForm from "../../components/DiscoverForm/DiscoverForm";
 import MapComponent from "../../components/Map/MapComponent";
 import { useState } from "react";
+import MobileFooter from "../../components/MobileFooter/MobileFooter";
 
 export default function DiscoverPage({
   postalCode,
@@ -32,7 +32,7 @@ export default function DiscoverPage({
           selectedType={selectedType}
         />
       </main>
-      <Footer />
+      <MobileFooter></MobileFooter>
     </>
   );
 }

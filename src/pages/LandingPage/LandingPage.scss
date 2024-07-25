@@ -20,13 +20,13 @@
 }
 
 .landingpage {
+  min-height: 100vh;
   background-color: $primary-light;
-  height: 100vh;
   display: flex;
   flex-direction: column;
 
   &__body {
-    height: 90vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
 
@@ -34,16 +34,32 @@
       height: 95vh;
     }
   }
+
+  &__footer {
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      background-color: $primary-dark;
+      color: $primary-light;
+      padding: 1rem 2rem;
+    }
+  }
 }
 
 .header {
   display: flex;
-  height: 10vh;
+  height: 4rem;
   justify-content: space-between;
   align-items: center;
 
   @include tablet {
-    height: 5vh;
+    height: 5rem;
     padding: 0.75rem 1.5rem;
     border-bottom: 1px solid $primary-dark;
   }
@@ -144,8 +160,6 @@
     @include desktop {
       bottom: 50px;
       color: $primary-dark;
-      font-size: 3rem;
-      // line-height: 4.25rem;
     }
   }
 
@@ -224,6 +238,7 @@
 
   &__button {
     width: 100%;
+    font-family: $special-font;
 
     @include tablet {
       display: none;
@@ -237,9 +252,9 @@
         justify-content: center;
         align-items: center;
         height: 1.5rem;
-        font-family: $special-font;
         font-size: 0.85rem;
-        width: 6rem;
+        // width: 6rem;
+        color: white;
       }
     }
   }
@@ -252,6 +267,10 @@
       width: 60%;
       height: 100%;
       min-height: 30rem;
+    }
+
+    @include desktop {
+      min-height: 20rem;
     }
   }
 
@@ -285,55 +304,64 @@ input:focus::placeholder {
 
 .upcoming {
   display: none;
-  background-color: $secondary-light;
-  color: $primary-dark;
-  height: 20rem;
 
   @include tablet {
     display: flex;
     flex-direction: column;
+    padding: 3rem 2rem;
+    background-color: $secondary-light;
+    color: $primary-dark;
+    height: 20rem;
     width: 100%;
+    gap: 1.5rem;
   }
-  &__header {
-    padding: 1rem;
 
-    @include desktop {
-      padding: 3rem 5rem 0rem;
-    }
+  @include desktop {
+    padding: 4rem 5rem;
   }
 
   &__container {
-    border: 1px solid $primary-light;
-    padding: 5rem;
-    margin: 2rem 5rem;
+    border: 1px solid $primary-dark;
+    padding: 4rem;
   }
 }
 
 .mission {
   display: none;
-  background-color: $primary-light;
-  color: $primary-dark;
-  height: 20rem;
 
   @include tablet {
     display: flex;
+    padding: 3rem 2rem;
     flex-direction: column;
+    background-color: $primary-light;
+    color: $primary-dark;
+    gap: 1.5rem;
   }
-  &__header {
-    padding: 1rem;
 
-    @include desktop {
-      padding: 3rem 5rem;
-    }
+  @include desktop {
+    padding: 3rem 5rem;
   }
 
   &__text {
-    margin: 1rem 5rem;
     width: 40%;
   }
 }
 
 .footer {
-  height: 5vh;
-  background-color: $primary-dark;
+  &__link {
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    @include tablet {
+      color: $primary-light;
+    }
+  }
+
+  &__link:visited {
+    color: $primary-dark;
+
+    @include tablet {
+      color: $primary-light;
+    }
+  }
 }

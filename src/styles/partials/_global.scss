@@ -31,8 +31,12 @@ h1 {
 
 h2 {
   font-weight: 600;
-  font-size: 2.75rem;
+  font-size: 2rem;
   line-height: 2.5rem;
+
+  @include tablet {
+    // font-size: ;
+  }
 }
 
 h3 {
@@ -52,8 +56,8 @@ h4 {
   }
 
   @include desktop {
-    font-size: 2rem;
-    line-height: 2.25rem;
+    font-size: 3.5rem;
+    line-height: 4rem;
   }
 }
 
@@ -72,6 +76,7 @@ h5 {
     line-height: 1.2rem;
   }
 }
+
 h6 {
   font-family: $special-font;
   font-weight: 400;
@@ -89,9 +94,9 @@ p {
   font-size: 0.85rem;
   line-height: 1.25rem;
 
-  @include desktop {
-    font-size: 1.25rem;
-    line-height: 2rem;
+  @include tablet {
+    font-size: 0.85rem;
+    line-height: 1.2rem;
   }
 }
 
@@ -106,6 +111,7 @@ a {
   word-wrap: break-word;
   margin: 0rem;
   padding: 0rem;
+  font-size: 3rem;
 }
 
 ::placeholder {
@@ -113,18 +119,29 @@ a {
 }
 
 .logo {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
+
+  @include tablet {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 
 .button--round {
   width: 10rem;
-  height: 2rem;
+  padding: 0.5rem;
   border: none;
   border-radius: 50px;
   color: white;
   background-color: $primary-dark;
+  font-family: $special-font;
+
+  @include tablet {
+    padding: 1rem;
+  }
 }
+
 .button--square {
   background-color: $primary-dark;
   height: 3rem;
@@ -132,4 +149,8 @@ a {
   font-family: $font-family;
   border: none;
   font-size: 1rem;
+}
+
+a {
+  font-size: 0.85rem;
 }

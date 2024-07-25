@@ -1,8 +1,8 @@
 import "./LandingPage.scss";
 import greenLogo from "../../assets/logos/greenlogo.png";
 import treeSeedling from "../../assets/images/pexels-akilmazumder-1072824.jpg";
-import { useNavigate, NavLink } from "react-router-dom";
-import DiscoverPage from "../DiscoverPage/DiscoverPage";
+import { useNavigate, NavLink, Link } from "react-router-dom";
+import MobileFooter from "../../components/MobileFooter/MobileFooter";
 
 export default function LandingPage({
   postalCode,
@@ -75,13 +75,13 @@ export default function LandingPage({
                   ></input>
                   <div className="hero__error">{error}</div>
                   <button className="button--round hero__button" type="submit">
-                    <h6>discover</h6>
+                    discover
                   </button>
-                  <NavLink to="/discover">
-                    {" "}
-                    <a className="button--round hero__button--tablet">
-                      discover
-                    </a>
+                  <NavLink
+                    to="/discover"
+                    className="button--round hero__button--tablet"
+                  >
+                    discover
                   </NavLink>
                 </form>
               </div>
@@ -105,7 +105,12 @@ export default function LandingPage({
             </p>
           </section>
         </div>
-        <footer className="footer">login register</footer>
+
+        <footer className="landingpage__footer footer">
+          <Link className="footer__link">contact us</Link>
+          <Link className="footer__link">register</Link>
+          <Link className="footer__link">login</Link>
+        </footer>
       </main>
     </>
   );

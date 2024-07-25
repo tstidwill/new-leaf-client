@@ -1,6 +1,7 @@
 @use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
 
-.footer {
+.mobilefooter {
   height: 10vh;
   width: 100%;
   display: flex;
@@ -32,6 +33,10 @@
       font-style: 800;
       color: $primary-dark;
     }
+  }
+
+  @include tablet {
+    display: none;
   }
 }
 .earthicon {

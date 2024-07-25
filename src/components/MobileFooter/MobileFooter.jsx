@@ -2,25 +2,25 @@ import greenLogo from "../../assets/logos/greenlogo.png";
 import { NavLink } from "react-router-dom";
 import earthIcon from "../../assets/icons/earthbutton.png";
 import calendarIcon from "../../assets/icons/calendarbutton.png";
-import "./Footer.scss";
+import "./MobileFooter.scss";
 
-export default function Footer() {
+export default function MobileFooter() {
   return (
-    <footer className="footer">
-      <NavLink to="/" className="footer__text">
-        <div className="footer__logocontainer">
+    <footer className="mobilefooter">
+      <NavLink to="/" className="mobilefooter__text">
+        <div className="mobilefooter__logocontainer">
           <img src={earthIcon} alt="earth icon" className="earthicon" />
           <h6>discover</h6>
         </div>
       </NavLink>
-      <NavLink to="/" className="footer__text">
-        <div className="footer__logocontainer">
-          <img src={greenLogo} alt="leaf logo" className="footer__logo" />
+      <NavLink to="/" className="mobilefooter__text">
+        <div className="mobilefooter__logocontainer">
+          <img src={greenLogo} alt="leaf logo" className="mobilefooter__logo" />
           <h6>home</h6>
         </div>
       </NavLink>
-      <NavLink to="/events" className="footer__text">
-        <div className="footer__logocontainer">
+      <NavLink to="/events" className="mobilefooter__text">
+        <div className="mobilefooter__logocontainer">
           <img
             src={calendarIcon}
             alt="calendary icon"

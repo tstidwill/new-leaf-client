@@ -1,6 +1,5 @@
 import "./EventsPage.scss";
 import greenLogo from "../../assets/logos/greenlogo.png";
-import Footer from "../../components/Footer/Footer";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -8,6 +7,7 @@ import pickupImage from "../../assets/images/pexels-shvetsa-5029810.jpg";
 import waterImage from "../../assets/images/pexels-danielspase-2091351.jpg";
 import treeImage from "../../assets/images/pexels-mikegreer-photos-1390371.jpg";
 import conferenceImage from "../../assets/images/pexels-wildlittlethingsphoto-705792.jpg";
+import MobileFooter from "../../components/MobileFooter/MobileFooter";
 
 export default function LandingPage() {
   const API_URL = import.meta.env.VITE_CORS_ORIGIN;
@@ -85,7 +85,7 @@ export default function LandingPage() {
             );
           })}
       </section>
-      <Footer />
+      <MobileFooter />
     </>
   );
 }
