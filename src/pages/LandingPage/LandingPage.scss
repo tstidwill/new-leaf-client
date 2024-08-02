@@ -20,52 +20,43 @@
 }
 
 .landingpage {
-  min-height: 100vh;
+  height: 100vh;
   background-color: $primary-light;
   display: flex;
   flex-direction: column;
 
-  &__body {
-    height: 85vh;
-    display: flex;
-    flex-direction: column;
-
-    @include tablet {
-      height: 95vh;
-    }
+  @include tablet {
+    min-height: 100vh;
   }
 
-  &__footer {
-    height: 3rem;
+  &__body {
+    height: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
-    @include tablet {
-      display: flex;
-      justify-content: space-between;
-      background-color: $primary-dark;
-      color: $primary-light;
-      padding: 1rem 2rem;
-    }
+    flex-direction: column;
   }
 }
 
 .header {
+  height: 5rem;
   display: flex;
-  height: 4rem;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
 
   @include tablet {
-    height: 5rem;
-    padding: 0.75rem 1.5rem;
+    height: 4rem;
     border-bottom: 1px solid $primary-dark;
   }
 
-  @include desktop {
-    padding: 0.75rem 5rem;
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
+      width: 80%;
+      max-width: 90rem;
+      padding: 0.75rem;
+    }
   }
 
   &__logo {
@@ -100,31 +91,38 @@
 }
 
 .hero {
-  height: 100%;
   display: flex;
-  align-items: center;
-  padding: 1rem;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
 
-  @include tablet {
-    flex-direction: row;
-    position: relative;
-    padding: 0;
+  &__content {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+
+    @include tablet {
+      flex-direction: row;
+      position: relative;
+      padding: 1.5rem 0;
+      width: 80%;
+      max-width: 90rem;
+    }
+
+    @include desktop {
+      min-height: 50rem;
+    }
   }
 
   &__text-side {
     width: 100%;
 
     @include tablet {
-      padding-left: 2rem;
       width: 40%;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-    }
-
-    @include desktop {
-      padding-left: 5rem;
     }
   }
 
@@ -271,6 +269,7 @@
 
     @include desktop {
       min-height: 20rem;
+      width: 100%;
     }
   }
 
@@ -304,50 +303,141 @@ input:focus::placeholder {
 
 .upcoming {
   display: none;
+  background-color: $secondary-light;
 
   @include tablet {
     display: flex;
-    flex-direction: column;
-    padding: 3rem 2rem;
-    background-color: $secondary-light;
-    color: $primary-dark;
-    height: 20rem;
-    width: 100%;
-    gap: 1.5rem;
+    justify-content: center;
+    min-height: 20rem;
   }
 
   @include desktop {
-    padding: 4rem 5rem;
+    min-height: 30rem;
+  }
+
+  &__content {
+    @include tablet {
+      width: 80%;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      padding: 3rem 0;
+      gap: 1.5rem;
+    }
+    @include desktop {
+      max-width: 90rem;
+    }
   }
 
   &__container {
     border: 1px solid $primary-dark;
-    padding: 4rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__header {
+    align-self: flex-start;
+  }
+}
+
+.impact {
+  display: none;
+  background-color: $primary-dark;
+  color: $primary-light;
+
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    min-height: 10rem;
+  }
+
+  @include desktop {
+    min-height: 20rem;
+  }
+
+  &__content {
+    @include tablet {
+      width: 80%;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      padding: 3rem 0;
+      gap: 1.5rem;
+    }
+    @include desktop {
+      max-width: 90rem;
+    }
+  }
+
+  &__container {
+    border: 1px solid $primary-dark;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__header {
+    align-self: flex-start;
   }
 }
 
 .mission {
   display: none;
+  background-color: $primary-light;
 
   @include tablet {
     display: flex;
-    padding: 3rem 2rem;
-    flex-direction: column;
-    background-color: $primary-light;
-    color: $primary-dark;
-    gap: 1.5rem;
+    justify-content: center;
   }
 
-  @include desktop {
-    padding: 3rem 5rem;
+  &__content {
+    @include tablet {
+      width: 80%;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      padding: 3rem 0;
+      color: $primary-dark;
+      gap: 1.5rem;
+      max-width: 90rem;
+    }
+  }
+
+  &__header {
+    align-self: flex-start;
   }
 
   &__text {
     width: 40%;
+    align-self: start;
+    // font-size: 1.5srem;
   }
 }
 
 .footer {
+  display: none;
+
+  @include tablet {
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    background-color: $primary-dark;
+    color: $primary-light;
+  }
+
+  &__content {
+    width: 80%;
+    max-width: 90rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__link {
     font-size: 0.75rem;
     font-weight: 600;

@@ -90,13 +90,13 @@ h6 {
 }
 
 p {
-  font-weight: 400;
-  font-size: 0.85rem;
-  line-height: 1.25rem;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2rem;
 
   @include tablet {
-    font-size: 0.85rem;
-    line-height: 1.2rem;
+    font-size: 1.25rem;
+    line-height: 2rem;
   }
 }
 
