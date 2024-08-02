@@ -1,0 +1,57 @@
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/global" as *;
+
+.header {
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+
+  @include tablet {
+    height: 3rem;
+    border-bottom: 1px solid $primary-dark;
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
+      width: 80%;
+      max-width: 90rem;
+      padding: 0.75rem;
+    }
+  }
+
+  &__logo {
+    margin-left: 0.5rem;
+
+    @include tablet {
+      margin-left: 0rem;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      width: 30%;
+    }
+  }
+
+  &__navlink {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      font-weight: bold;
+    }
+    &:visited {
+      color: $primary-dark;
+    }
+  }
+}

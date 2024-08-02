@@ -1,0 +1,40 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.footer {
+  display: none;
+
+  @include tablet {
+    height: 2.5rem;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    background-color: $primary-dark;
+    color: $primary-light;
+  }
+
+  &__content {
+    width: 80%;
+    max-width: 90rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    @include tablet {
+      color: $primary-light;
+    }
+  }
+
+  &__link:visited {
+    color: $primary-dark;
+
+    @include tablet {
+      color: $primary-light;
+    }
+  }
+}

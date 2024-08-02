@@ -3,6 +3,8 @@ import greenLogo from "../../assets/logos/greenlogo.png";
 import treeSeedling from "../../assets/images/pexels-akilmazumder-1072824.jpg";
 import planetB from "../../assets/images/pexels-markusspiske-2990650.jpg";
 import { useNavigate, NavLink, Link } from "react-router-dom";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 export default function LandingPage({
   postalCode,
@@ -33,26 +35,7 @@ export default function LandingPage({
   return (
     <>
       <main className="landingpage">
-        <div className="landingpage__header header">
-          <div className="header__content">
-            <img
-              src={greenLogo}
-              className="header__logo logo"
-              alt="leaf logo"
-            ></img>
-            <ul className="header__nav">
-              <NavLink to="/" className="header__navlink">
-                home
-              </NavLink>
-              <NavLink to="/discover" className="header__navlink">
-                discover
-              </NavLink>
-              <NavLink to="/events" className="header__navlink">
-                events
-              </NavLink>
-            </ul>
-          </div>
-        </div>
+        <Header />
         <div className="landingpage__body">
           <section className="landingpage__hero hero">
             <div className="hero__content">
@@ -133,15 +116,8 @@ export default function LandingPage({
               </div>
             </div>
           </section>
-
-          <footer className="landingpage__footer footer">
-            <div className="footer__content">
-              <Link className="footer__link">contact us</Link>
-              <Link className="footer__link">register</Link>
-              <Link className="footer__link">login</Link>
-            </div>
-          </footer>
         </div>
+        <Footer />
       </main>
     </>
   );
