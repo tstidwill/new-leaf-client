@@ -1,6 +1,7 @@
 import "./LandingPage.scss";
 import greenLogo from "../../assets/logos/greenlogo.png";
 import treeSeedling from "../../assets/images/pexels-akilmazumder-1072824.jpg";
+import planetB from "../../assets/images/pexels-markusspiske-2990650.jpg";
 import { useNavigate, NavLink, Link } from "react-router-dom";
 
 export default function LandingPage({
@@ -116,16 +117,20 @@ export default function LandingPage({
           <section className="landingpage__mission mission">
             <div className="mission__content">
               <h2 className="mission__header">Our Mission</h2>
-              <p className="mission__text">
-                Welcome to New Leaf, a platform with the mission of empowering
-                communities to live more sustainably. By connecting you with
-                nearby resources like community gardens, thrift shops, and zero
-                waste stores, we aim to make sustainable living accessible and
-                convenient for everyone. Together, we can build a greener, more
-                sustainable future, one postal code at a time. Join us in our
-                journey towards a more eco-friendly lifestyle, and discover the
-                sustainable options available in your neighborhood.
-              </p>
+              <div className="mission__body">
+                <img className="mission__image" src={planetB} />
+                <p className="mission__text">
+                  Welcome to New Leaf, a platform with the mission of empowering
+                  communities to live more sustainably. By connecting you with
+                  nearby resources like community gardens, thrift shops, and
+                  zero waste stores, we aim to make sustainable living
+                  accessible and convenient for everyone. Together, we can build
+                  a greener, more sustainable future, one postal code at a time.
+                  Join us in our journey towards a more eco-friendly lifestyle,
+                  and discover the sustainable options available in your
+                  neighborhood.
+                </p>
+              </div>
             </div>
           </section>
 
