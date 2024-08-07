@@ -11,7 +11,12 @@ import axios from "axios";
 import newleafMarker from "../../assets/icons/newleaf_marker.png";
 import NearYou from "../NearYou/NearYou";
 
-export default function MapComponent({ submittedPostalCode, selectedType }) {
+export default function MapComponent({
+  submittedPostalCode,
+  selectedType,
+  leaves,
+  setLeaves,
+}) {
   const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
   const API_URL = import.meta.env.VITE_CORS_ORIGIN;
   const MAP_ID = import.meta.env.VITE_GOOGLE_MAPS_MAP_ID;
@@ -19,7 +24,7 @@ export default function MapComponent({ submittedPostalCode, selectedType }) {
   const [markerRef, marker] = useAdvancedMarkerRef();
   const [coordinates, setCoordinates] = useState(null);
   const [error, setError] = useState(null);
-  const [leaves, setLeaves] = useState(null);
+
   const [selectedShop, setSelectedShop] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -121,7 +126,7 @@ export default function MapComponent({ submittedPostalCode, selectedType }) {
   }, [coordinates, selectedType]);
 
   return (
-    <>
+    <section className="mapcomponent">
       <APIProvider apiKey={API_KEY}>
         {loading && coordinates && (
           <div className="map-container">
@@ -170,7 +175,7 @@ export default function MapComponent({ submittedPostalCode, selectedType }) {
           </Map>
         )}
       </APIProvider>
-      <NearYou leaves={leaves} />
-    </>
+      {/* <NearYou leaves={leaves} /> */}
+    </section>
   );
 }

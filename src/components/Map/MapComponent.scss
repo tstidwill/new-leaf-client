@@ -1,10 +1,26 @@
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.mapcomponent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  @include tablet {
+    flex-direction: row-reverse;
+  }
+}
 
 .map-container {
   text-align: center;
   height: 35rem;
   width: 100%;
   background-color: $secondary-light;
+
+  @include tablet {
+    height: 100%;
+    // width: 50%;
+  }
 }
 .marker {
   width: 40px;

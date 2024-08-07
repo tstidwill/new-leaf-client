@@ -3,6 +3,11 @@ import DiscoverForm from "../../components/DiscoverForm/DiscoverForm";
 import MapComponent from "../../components/Map/MapComponent";
 import { useState } from "react";
 import MobileFooter from "../../components/MobileFooter/MobileFooter";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
+import NearYou from "../../components/NearYou/NearYou";
+import NearYouDesktop from "../../components/NearYou/NearYouMobile";
+import NearYouMobile from "../../components/NearYou/NearYouMobile";
 
 export default function DiscoverPage({
   postalCode,
@@ -14,25 +19,37 @@ export default function DiscoverPage({
   setError,
 }) {
   const [selectedType, setSelectedType] = useState("view_all");
+  const [leaves, setLeaves] = useState(null);
   return (
     <>
       <main className="discover">
-        <DiscoverForm
-          postalCode={postalCode}
-          setPostalCode={setPostalCode}
-          postalCodeValidation={postalCodeValidation}
-          setSubmittedPostalCode={setSubmittedPostalCode}
-          selectedType={selectedType}
-          setSelectedType={setSelectedType}
-          error={error}
-          setError={setError}
-        />
-        <MapComponent
-          submittedPostalCode={submittedPostalCode}
-          selectedType={selectedType}
-        />
+        <Header />
+        <div className="discover__body">
+          <div className="discover__textside">
+            <DiscoverForm
+              postalCode={postalCode}
+              setPostalCode={setPostalCode}
+              postalCodeValidation={postalCodeValidation}
+              setSubmittedPostalCode={setSubmittedPostalCode}
+              selectedType={selectedType}
+              setSelectedType={setSelectedType}
+              error={error}
+              setError={setError}
+            />
+
+            <NearYou leaves={leaves} />
+          </div>
+          <MapComponent
+            submittedPostalCode={submittedPostalCode}
+            selectedType={selectedType}
+            leaves={leaves}
+            setLeaves={setLeaves}
+          />
+        </div>
+        <NearYouMobile leaves={leaves} />
+        <MobileFooter></MobileFooter>
+        <Footer />
       </main>
-      <MobileFooter></MobileFooter>
     </>
   );
 }
