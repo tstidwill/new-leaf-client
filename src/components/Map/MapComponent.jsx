@@ -135,7 +135,9 @@ export default function MapComponent({
         )}
         {!submittedPostalCode && (
           <div className="map-container">
-            <p>Please enter a postal code above</p>
+            <p className="map-container__prompt">
+              Please enter a postal code above
+            </p>
           </div>
         )}
         {coordinates && !loading && (
