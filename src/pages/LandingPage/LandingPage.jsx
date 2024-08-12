@@ -1,10 +1,11 @@
 import "./LandingPage.scss";
-import greenLogo from "../../assets/logos/greenlogo.png";
 import treeSeedling from "../../assets/images/pexels-akilmazumder-1072824.jpg";
 import planetB from "../../assets/images/pexels-markusspiske-2990650.jpg";
 import { useNavigate, NavLink, Link } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 export default function LandingPage({
   postalCode,
@@ -31,6 +32,23 @@ export default function LandingPage({
       navigate("/discover");
     }
   };
+  const API_URL = import.meta.env.VITE_CORS_ORIGINS;
+  const [events, setEvents] = useState([]);
+
+  const getEvents = async () => {
+    try {
+      const response = await axios.get(`${API_URL}/events`);
+      console.log(response.data);
+      setEvents(response.data);
+    } catch (error) {
+      setEvents([]);
+      setError("Error fetching shops");
+    }
+  };
+
+  useEffect(() => {
+    getEvents();
+  }, []);
 
   return (
     <>
@@ -89,12 +107,6 @@ export default function LandingPage({
           <section className="landingpage__upcoming upcoming">
             <div className="upcoming__content">
               <h2 className="upcoming__header">Upcoming Events</h2>
-              <div className="upcoming__container">Coming Soon</div>
-            </div>
-          </section>
-          <section className="landingpage__impact impact">
-            <div className="impact__content">
-              <h2 className="impact__header">Impact</h2>
             </div>
           </section>
           <section className="landingpage__mission mission">

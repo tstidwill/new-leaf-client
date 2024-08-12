@@ -284,10 +284,16 @@ input:focus::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
   }
 
   &__header {
     align-self: flex-start;
+  }
+
+  &__cards {
+    display: flex;
+    height: 100%;
   }
 }
 
