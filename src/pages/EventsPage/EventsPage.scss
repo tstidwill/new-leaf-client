@@ -12,7 +12,13 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 10vh;
-  background-color: $primary-light;
+  min-height: 90vh;
+
+  @include tablet {
+    // height: 100%;
+    // min-height: 100vh;
+    // margin-bottom: 2.5rem;
+  }
 
   &__headerbox {
     padding: 1rem;
@@ -36,6 +42,8 @@
 
     @include tablet {
       flex-direction: row;
+      width: 80%;
+      max-width: 90rem;
     }
   }
 }
@@ -57,8 +65,15 @@
     margin: 1rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid $secondary-light;
+    // max-height: 6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
   }
   &__details {
     margin: 1rem;
+    height: 100%;
+    flex: 1;
+    justify-content: space-between;
   }
 }

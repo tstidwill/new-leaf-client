@@ -18,7 +18,7 @@ export default function MapComponent({
   setLeaves,
 }) {
   const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
-  const API_URL = import.meta.env.VITE_CORS_ORIGIN;
+  const API_URL = import.meta.env.VITE_CORS_ORIGINS;
   const MAP_ID = import.meta.env.VITE_GOOGLE_MAPS_MAP_ID;
 
   const [markerRef, marker] = useAdvancedMarkerRef();

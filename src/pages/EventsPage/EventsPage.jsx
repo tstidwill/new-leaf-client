@@ -1,5 +1,4 @@
 import "./EventsPage.scss";
-import greenLogo from "../../assets/logos/greenlogo.png";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -9,11 +8,10 @@ import treeImage from "../../assets/images/pexels-mikegreer-photos-1390371.jpg";
 import conferenceImage from "../../assets/images/pexels-wildlittlethingsphoto-705792.jpg";
 import MobileFooter from "../../components/MobileFooter/MobileFooter";
 import Header from "../../components/Header/Header";
-import LandingFooter from "../../components/LandingFooter/LandingFooter";
 import Footer from "../../components/Footer/Footer";
 
-export default function LandingPage() {
-  const API_URL = import.meta.env.VITE_CORS_ORIGIN;
+export default function EventsPage() {
+  const API_URL = import.meta.env.VITE_CORS_ORIGINS;
   const [events, setEvents] = useState(null);
   const [error, setError] = useState(null);
 
@@ -33,9 +31,6 @@ export default function LandingPage() {
 
   return (
     <>
-      {/* <div className="logobox">
-        <img src={greenLogo} className="logo" alt="leaf logo"></img>
-      </div> */}
       <Header />
       <section className="events">
         <section className="events__headerbox">
