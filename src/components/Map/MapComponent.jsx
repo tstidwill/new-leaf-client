@@ -74,11 +74,11 @@ export default function MapComponent({
       if (response.data.length > 0) {
         const filteredShops = response.data.filter((shop) => {
           const latWithinRange =
-            shop.lat >= coordinates.lat - 0.1 &&
-            shop.lat <= coordinates.lat + 0.1;
+            shop.lat >= coordinates.lat - 0.01 &&
+            shop.lat <= coordinates.lat + 0.01;
           const lngWithinRange =
-            shop.lng >= coordinates.lng - 0.1 &&
-            shop.lng <= coordinates.lng + 0.1;
+            shop.lng >= coordinates.lng - 0.01 &&
+            shop.lng <= coordinates.lng + 0.01;
 
           const typeMatch =
             selectedType === "view_all" || shop.type === selectedType;
@@ -144,7 +144,7 @@ export default function MapComponent({
           <Map
             className="map-container"
             center={{ lat: coordinates.lat, lng: coordinates.lng }}
-            defaultZoom={10}
+            defaultZoom={15}
             mapId={MAP_ID}
           >
             {leaves &&
