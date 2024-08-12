@@ -38,7 +38,7 @@ export default function LandingPage({
   const getEvents = async () => {
     try {
       const response = await axios.get(`${API_URL}/events`);
-      console.log(response.data);
+      console.log(`fetch events data: ` + response.data);
       setEvents(response.data);
     } catch (error) {
       setEvents([]);
