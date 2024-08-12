@@ -6,6 +6,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import EventCard from "../../components/EventCard/EventCard";
 
 export default function LandingPage({
   postalCode,
@@ -38,7 +39,6 @@ export default function LandingPage({
   const getEvents = async () => {
     try {
       const response = await axios.get(`${API_URL}/events`);
-      console.log(`fetch events data: ` + response.data);
       setEvents(response.data);
     } catch (error) {
       setEvents([]);
@@ -107,6 +107,13 @@ export default function LandingPage({
           <section className="landingpage__upcoming upcoming">
             <div className="upcoming__content">
               <h2 className="upcoming__header">Upcoming Events</h2>
+              <section className="upcoming__cards">
+                {error && <p>{error} </p>}
+                {events &&
+                  events.map((event) => {
+                    return <EventCard event={event} key={event.id} />;
+                  })}
+              </section>
             </div>
           </section>
           <section className="landingpage__mission mission">
