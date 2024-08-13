@@ -27,22 +27,24 @@ export default function EventsPage() {
 
   return (
     <>
-      <Header />
       <section className="events">
-        <section className="events__headerbox">
-          <h3>Upcoming Events</h3>
-        </section>
+        <Header />
+        <section className="events__body">
+          <section className="events__headerbox">
+            <h3>Upcoming Events</h3>
+          </section>
 
-        <section className="upcoming__cards">
-          {error && <p>{error} </p>}
-          {events &&
-            events.map((event) => {
-              return <EventCard event={event} key={event.id} />;
-            })}
+          <section className="events__cards">
+            {error && <p>{error} </p>}
+            {events &&
+              events.map((event) => {
+                return <EventCard event={event} key={event.id} />;
+              })}
+          </section>
         </section>
+        <MobileFooter />
+        <Footer />
       </section>
-      <MobileFooter />
-      <Footer />
     </>
   );
 }

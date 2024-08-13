@@ -4,14 +4,14 @@ import waterImage from "../../assets/images/pexels-danielspase-2091351.jpg";
 import treeImage from "../../assets/images/pexels-mikegreer-photos-1390371.jpg";
 import conferenceImage from "../../assets/images/pexels-wildlittlethingsphoto-705792.jpg";
 
-export default function EventCard({ event }) {
+export default function EventCard({ event, suffix }) {
   return (
-    <section className="eventcard" key={event.id}>
+    <section className={`eventcard eventcard--${suffix}`} key={event.id}>
       {event.type === "conference" && (
         <img
           src={conferenceImage}
           alt="Conference event"
-          className="eventcard__image"
+          className={`eventcard__image eventcard__image--${suffix}`}
         />
       )}
 
@@ -19,7 +19,7 @@ export default function EventCard({ event }) {
         <img
           src={pickupImage}
           alt="Cleaning up park"
-          className="eventcard__image"
+          className={`eventcard__image eventcard__image--${suffix}`}
         />
       )}
 
@@ -27,12 +27,16 @@ export default function EventCard({ event }) {
         <img
           src={treeImage}
           alt="Seed of a plant"
-          className="eventcard__image"
+          className={`eventcard__image eventcard__image--${suffix}`}
         />
       )}
 
       {event.type === "water_cleanup" && (
-        <img src={waterImage} alt="Lake" className="eventcard__image" />
+        <img
+          src={waterImage}
+          alt="Lake"
+          className={`eventcard__image eventcard__image--${suffix}`}
+        />
       )}
       <h4 className="eventcard__title"> {event.name}</h4>
       <div className="eventcard__details">

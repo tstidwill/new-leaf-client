@@ -144,7 +144,7 @@ export default function MapComponent({
           <Map
             className="map-container"
             center={{ lat: coordinates.lat, lng: coordinates.lng }}
-            defaultZoom={15}
+            defaultZoom={14}
             mapId={MAP_ID}
           >
             {leaves &&

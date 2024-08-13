@@ -111,7 +111,13 @@ export default function LandingPage({
                 {error && <p>{error} </p>}
                 {events &&
                   events.map((event) => {
-                    return <EventCard event={event} key={event.id} />;
+                    return (
+                      <EventCard
+                        suffix={`landing`}
+                        event={event}
+                        key={event.id}
+                      />
+                    );
                   })}
               </section>
             </div>

@@ -1,13 +1,12 @@
 import "./DiscoverPage.scss";
 import DiscoverForm from "../../components/DiscoverForm/DiscoverForm";
 import MapComponent from "../../components/Map/MapComponent";
-import { useState } from "react";
 import MobileFooter from "../../components/MobileFooter/MobileFooter";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import NearYou from "../../components/NearYou/NearYou";
-import NearYouDesktop from "../../components/NearYou/NearYouMobile";
 import NearYouMobile from "../../components/NearYou/NearYouMobile";
+import { useState } from "react";
 
 export default function DiscoverPage({
   postalCode,

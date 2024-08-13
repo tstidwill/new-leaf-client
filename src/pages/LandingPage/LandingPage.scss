@@ -294,6 +294,10 @@ input:focus::placeholder {
   &__cards {
     display: flex;
     height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
   }
 }
 
