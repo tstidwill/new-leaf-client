@@ -3,14 +3,13 @@
 
 .nearyou {
   display: none;
-
-  @include medium-tablet {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    flex: 1;
-    overflow: auto;
-  }
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
+  overflow: auto;
+  margin-bottom: 2rem;
 
   &__header {
     margin: 1.5rem 0;

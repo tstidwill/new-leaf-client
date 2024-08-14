@@ -130,7 +130,7 @@ export default function MapComponent({
       <APIProvider apiKey={API_KEY}>
         {loading && coordinates && (
           <div className="map-container">
-            <p>Loading...</p>
+            <p className="mapcomponent__loading">Loading...</p>
           </div>
         )}
         {!submittedPostalCode && (

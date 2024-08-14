@@ -1,6 +1,32 @@
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins" as *;
 
+.discover-mobile {
+  display: flex;
+  flex-direction: column;
+  @include medium-tablet {
+    display: none;
+  }
+}
+
+.discover-desktop {
+  display: none;
+
+  @include medium-tablet {
+    display: flex;
+    flex: 1;
+    overflow: auto;
+  }
+  &__textside {
+    width: 50%;
+    box-sizing: border-box;
+    overflow: auto;
+  }
+  &__mapside {
+    width: 50%;
+  }
+}
+
 .discover {
   display: flex;
   flex-direction: column;
@@ -28,6 +54,26 @@
       width: 40%;
       display: flex;
       flex-direction: column;
+    }
+  }
+
+  &__map {
+    &--mobile {
+      display: flex;
+      height: 35rem;
+      width: 100%;
+
+      @include medium-tablet {
+        display: none;
+      }
+    }
+    &--desktop {
+      display: none;
+
+      @include medium-tablet {
+        display: flex;
+        width: 100%;
+      }
     }
   }
 }

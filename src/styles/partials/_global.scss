@@ -137,11 +137,6 @@ a {
 .logo {
   width: 2rem;
   height: 2rem;
-
-  @include large-tablet {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
 }
 
 .button--round {
@@ -165,14 +160,7 @@ a {
     font-family: $font-family;
     border: none;
     font-size: 1rem;
-
-    @include medium-tablet {
-      height: 1.5rem;
-    }
-
-    @include large-tablet {
-      height: 3rem;
-    }
+    height: 3rem;
   }
   &--landing {
     background-color: $secondary-midtone;
@@ -184,6 +172,11 @@ a {
     box-shadow: 4px 4px 8px rgba(1, 111, 86, 0.2);
     @include medium-tablet {
       font-size: 0.8rem;
+      height: 1.5rem;
+    }
+
+    @include large-tablet {
+      height: 3rem;
     }
   }
   &--landing:hover {

@@ -3,7 +3,6 @@
 @use "../../styles/partials/global" as *;
 
 .header {
-  height: 5rem;
   display: flex;
   justify-content: center;
 
@@ -18,6 +17,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 3rem;
 
     @include medium-tablet {
       width: 80%;
@@ -28,6 +28,7 @@
 
   &__logo {
     margin-left: 0.5rem;
+    margin-top: 0.5rem;
 
     @include medium-tablet {
       margin-left: 0rem;

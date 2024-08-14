@@ -5,9 +5,14 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  height: 100%;
 
   @include medium-tablet {
     flex-direction: row-reverse;
+  }
+
+  &__loading {
+    padding: 1rem;
   }
 }
 
@@ -19,7 +24,6 @@
 
   @include medium-tablet {
     height: 100%;
-    // width: 50%;
   }
 
   &__prompt {

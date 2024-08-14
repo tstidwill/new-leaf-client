@@ -2,6 +2,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .nymobile {
+  padding-bottom: 10vh;
   @include medium-tablet {
     display: none;
   }
@@ -33,7 +34,8 @@
 
   &__image {
     height: 100%;
-    object-fit: cover;
+    width: 100%;
+    object-fit: fill;
   }
 
   &__text {

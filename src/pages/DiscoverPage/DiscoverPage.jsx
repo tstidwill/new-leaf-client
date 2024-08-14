@@ -23,8 +23,31 @@ export default function DiscoverPage({
     <>
       <main className="discover">
         <Header />
-        <div className="discover__body">
-          <div className="discover__textside">
+        <section className="discover-mobile">
+          <DiscoverForm
+            postalCode={postalCode}
+            setPostalCode={setPostalCode}
+            postalCodeValidation={postalCodeValidation}
+            setSubmittedPostalCode={setSubmittedPostalCode}
+            selectedType={selectedType}
+            setSelectedType={setSelectedType}
+            error={error}
+            setError={setError}
+          />
+          <section className="discover__map discover__map--mobile">
+            <MapComponent
+              submittedPostalCode={submittedPostalCode}
+              selectedType={selectedType}
+              leaves={leaves}
+              setLeaves={setLeaves}
+            />
+          </section>
+          <NearYouMobile leaves={leaves} />
+          <MobileFooter />
+        </section>
+
+        <section className="discover-desktop">
+          <div className="discover-desktop__textside">
             <DiscoverForm
               postalCode={postalCode}
               setPostalCode={setPostalCode}
@@ -35,18 +58,17 @@ export default function DiscoverPage({
               error={error}
               setError={setError}
             />
-
             <NearYou leaves={leaves} />
           </div>
-          <MapComponent
-            submittedPostalCode={submittedPostalCode}
-            selectedType={selectedType}
-            leaves={leaves}
-            setLeaves={setLeaves}
-          />
-        </div>
-        <NearYouMobile leaves={leaves} />
-        <MobileFooter></MobileFooter>
+          <div className="discover-desktop__mapside">
+            <MapComponent
+              submittedPostalCode={submittedPostalCode}
+              selectedType={selectedType}
+              leaves={leaves}
+              setLeaves={setLeaves}
+            />
+          </div>
+        </section>
         <Footer />
       </main>
     </>
