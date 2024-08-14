@@ -38,7 +38,7 @@ export default function DiscoverForm({
           type="text"
           name="postalcode"
           className="discover__input"
-          placeholder="Enter your postal code.."
+          placeholder="Enter your postal or ZIP code"
           value={postalCode}
           onChange={handlePostalCodeChange}
         ></input>

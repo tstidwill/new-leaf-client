@@ -26,7 +26,7 @@ export default function NearYouMobile({ leaves }) {
                 </a>
               )}
             </div>
-            <div className="nymobile_imagecontainer">
+            <div className="nymobile__imagecontainer">
               {shop.type === "zero_waste_grocery" && (
                 <img
                   src={groceryImage}

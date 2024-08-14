@@ -73,7 +73,7 @@ export default function LandingPage({
                         className={`hero__input ${
                           error ? "hero__input--error" : ""
                         }`}
-                        placeholder="Enter your postal code.."
+                        placeholder="Enter your postal or ZIP code"
                         name="postalCode"
                         value={postalCode}
                         onChange={handleChange}

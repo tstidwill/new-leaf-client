@@ -10,16 +10,19 @@ function App() {
   const [error, setError] = useState("");
   const [submittedPostalCode, setSubmittedPostalCode] = useState("");
 
-  const postalCodeValidation = (postalCode) => {
-    const postalCodeFormat = /^[A-Za-z]\d[A-Za-z] ?\d[AA-Za-z]\d$/;
+  const postalCodeValidation = (userInput) => {
+    const postalCodeOrZipFormat =
+      /(^[A-Za-z]\d[A-Za-z] ?\d[A-Za-z]\d$)|(^\d{5}$)/i;
+    const trimmedInput = userInput.trim();
 
-    if (postalCode.trim() === "") {
-      setError("Please enter a postal code");
+    if (trimmedInput === "") {
+      setError("Please enter a postal or zip code ");
       return false;
     }
+    const isValid = postalCodeOrZipFormat.test(trimmedInput);
 
-    if (!postalCodeFormat.test(postalCode.trim())) {
-      setError("Invalid postal code format. Format: A1A 1A1");
+    if (!isValid) {
+      setError("Invalid postal code or ZIP format. Format: A1A 1A1 or 12345");
       return false;
     }
 
