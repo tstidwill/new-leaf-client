@@ -7,6 +7,7 @@ import Footer from "../../components/Footer/Footer";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import EventCard from "../../components/EventCard/EventCard";
+import logo from "../../assets/logos/greenlogo.png";
 
 export default function LandingPage({
   postalCode,
@@ -73,7 +74,7 @@ export default function LandingPage({
                         className={`hero__input ${
                           error ? "hero__input--error" : ""
                         }`}
-                        placeholder="Enter your postal or ZIP code"
+                        placeholder="Enter your area code"
                         name="postalCode"
                         value={postalCode}
                         onChange={handleChange}
@@ -87,7 +88,7 @@ export default function LandingPage({
                       </button>
                       <NavLink
                         to="/discover"
-                        className="button--round hero__button--tablet"
+                        className="button--round hero__button--medium-tablet"
                       >
                         discover
                       </NavLink>
@@ -127,17 +128,28 @@ export default function LandingPage({
               <h2 className="mission__header">Our Mission</h2>
               <div className="mission__body">
                 <img className="mission__image" src={planetB} />
-                <p className="mission__text">
-                  Welcome to New Leaf, a platform with the mission of empowering
-                  communities to live more sustainably. By connecting you with
-                  nearby resources like community gardens, thrift shops, and
-                  zero waste stores, we aim to make sustainable living
-                  accessible and convenient for everyone. Together, we can build
-                  a greener, more sustainable future, one postal code at a time.
-                  Join us in our journey towards a more eco-friendly lifestyle,
-                  and discover the sustainable options available in your
-                  neighborhood.
-                </p>
+                <section className="mission__textside">
+                  <p className="mission__text">
+                    Welcome to{" "}
+                    <b>
+                      New Leaf <img src={logo} className="mission__logo" />
+                    </b>
+                    , a platform with the mission of empowering communities to
+                    live more sustainably. By connecting you with nearby
+                    resources like community gardens, thrift shops, and zero
+                    waste stores, we aim to make sustainable living accessible
+                    and convenient for everyone.
+                  </p>
+                  <p className="mission__text">
+                    Together, we can build a greener, more sustainable future,
+                    one area code at a time.
+                  </p>{" "}
+                  <p className="mission__text">
+                    Join us in our journey towards a more eco-friendly
+                    lifestyle, and discover the sustainable options available in
+                    your neighborhood.
+                  </p>
+                </section>
               </div>
             </div>
           </section>

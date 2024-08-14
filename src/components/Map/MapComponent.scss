@@ -6,7 +6,7 @@
   flex-direction: column;
   flex: 1;
 
-  @include tablet {
+  @include medium-tablet {
     flex-direction: row-reverse;
   }
 }
@@ -17,7 +17,7 @@
   width: 100%;
   background-color: $secondary-light;
 
-  @include tablet {
+  @include medium-tablet {
     height: 100%;
     // width: 50%;
   }

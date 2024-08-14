@@ -2,7 +2,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .nymobile {
-  @include tablet {
+  @include medium-tablet {
     display: none;
   }
   &__header {

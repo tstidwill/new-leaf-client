@@ -40,13 +40,13 @@ export default function EventCard({ event, suffix }) {
       )}
       <h4 className="eventcard__title"> {event.name}</h4>
       <div className="eventcard__details">
-        <h5>{event.date}</h5>
-        <h5>
+        <h5 className="eventcard__date">{event.date}</h5>
+        <h5 className="eventcard__location">
           {event.location}, {event.city}
         </h5>
         <a
           href={event.link}
-          className="button--square events__button"
+          className={`button--square button--${suffix}`}
           target="_blank"
           rel="noopener noreferrer"
         >

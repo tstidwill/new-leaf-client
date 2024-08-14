@@ -26,7 +26,7 @@
   flex: 1;
   flex-direction: column;
 
-  @include tablet {
+  @include medium-tablet {
     // min-height: 100vh;
   }
 
@@ -49,7 +49,7 @@
     align-items: center;
     padding: 1rem;
 
-    @include tablet {
+    @include medium-tablet {
       flex-direction: row;
       position: relative;
       padding: 1.5rem 0;
@@ -65,7 +65,7 @@
   &__text-side {
     width: 100%;
 
-    @include tablet {
+    @include medium-tablet {
       width: 40%;
       height: 100%;
       display: flex;
@@ -84,7 +84,7 @@
   &__title {
     text-align: center;
 
-    @include tablet {
+    @include medium-tablet {
       text-align: left;
     }
   }
@@ -97,15 +97,15 @@
     top: 14px;
     right: 60px;
 
-    @include tablet {
+    @include medium-tablet {
       justify-content: flex-start;
       top: 5px;
       right: 0px;
     }
 
     @include desktop {
-      bottom: 50px;
-      color: $primary-dark;
+      font-size: 2rem;
+      line-height: 2.25rem;
     }
   }
 
@@ -113,7 +113,7 @@
     text-align: center;
     min-width: 80%;
 
-    @include tablet {
+    @include medium-tablet {
       text-align: left;
     }
   }
@@ -126,7 +126,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    @include tablet {
+    @include medium-tablet {
       align-items: flex-start;
     }
   }
@@ -142,7 +142,7 @@
     font-size: 0.7rem;
     width: 100%;
 
-    @include tablet {
+    @include medium-tablet {
       display: none;
     }
 
@@ -186,14 +186,14 @@
     width: 100%;
     font-family: $special-font;
 
-    @include tablet {
+    @include medium-tablet {
       display: none;
     }
 
-    &--tablet {
+    &--medium-tablet {
       display: none;
 
-      @include tablet {
+      @include medium-tablet {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -208,7 +208,7 @@
   &__image-side {
     display: none;
 
-    @include tablet {
+    @include medium-tablet {
       display: flex;
       width: 60%;
       height: 100%;
@@ -224,7 +224,7 @@
   &__image-container {
     display: none;
 
-    @include tablet {
+    @include medium-tablet {
       display: flex;
       height: 80%;
       width: 50%;
@@ -237,7 +237,7 @@
   &__image {
     display: none;
 
-    @include tablet {
+    @include medium-tablet {
       display: flex;
       overflow: hidden;
       object-fit: cover;
@@ -253,18 +253,18 @@ input:focus::placeholder {
   display: none;
   background-color: $secondary-light;
 
-  @include tablet {
+  @include medium-tablet {
     display: flex;
     justify-content: center;
     min-height: 20rem;
   }
 
   @include desktop {
-    min-height: 30rem;
+    min-height: 35rem;
   }
 
   &__content {
-    @include tablet {
+    @include medium-tablet {
       width: 80%;
       align-items: center;
       display: flex;
@@ -306,7 +306,7 @@ input:focus::placeholder {
   background-color: $primary-dark;
   color: $primary-light;
 
-  @include tablet {
+  @include medium-tablet {
     display: flex;
     justify-content: center;
     min-height: 10rem;
@@ -317,7 +317,7 @@ input:focus::placeholder {
   }
 
   &__content {
-    @include tablet {
+    @include medium-tablet {
       width: 80%;
       align-items: center;
       display: flex;
@@ -348,13 +348,13 @@ input:focus::placeholder {
   display: none;
   background-color: $primary-light;
 
-  @include tablet {
+  @include medium-tablet {
     display: flex;
     justify-content: center;
   }
 
   &__content {
-    @include tablet {
+    @include medium-tablet {
       width: 80%;
       align-items: center;
       display: flex;
@@ -378,14 +378,27 @@ input:focus::placeholder {
     justify-content: center;
   }
 
+  &__textside {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__text {
-    width: 40%;
     align-self: center;
+    text-align: center;
+    padding-bottom: 1.5rem;
   }
 
   &__image {
     width: 50%;
-    max-height: 20rem;
     object-fit: cover;
+
+    @include large-tablet {
+      max-height: 20rem;
+    }
+  }
+  &__logo {
+    width: 15px;
+    height: 15px;
   }
 }

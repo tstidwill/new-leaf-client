@@ -5,12 +5,14 @@ $special-font: "Marmelad";
 //colors
 $primary-light: #f9fdff;
 $primary-midtone: #7db6ab;
-$primary-dark: #016f56;
+$primary-dark: rgb(1, 111, 86);
 
 $secondary-light: #cef0fd;
 $secondary-midtone: #bbdad5;
 $secondary-dark: #3f9380;
 
 //responsive
-$tablet-breakpoint: 48rem;
-$desktop-breakpoint: 80rem;
+$small-tablet-breakpoint: 36rem; //576
+$medium-tablet-breakpoint: 48rem; //768px
+$large-tablet-breakpoint: 62rem; //992px
+$desktop-breakpoint: 80rem; //1280px

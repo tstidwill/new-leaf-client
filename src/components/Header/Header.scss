@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
 
-  @include tablet {
+  @include medium-tablet {
     height: 3rem;
     border-bottom: 1px solid $primary-dark;
     width: 100%;
@@ -19,7 +19,7 @@
     justify-content: space-between;
     align-items: center;
 
-    @include tablet {
+    @include medium-tablet {
       width: 80%;
       max-width: 90rem;
       padding: 0.75rem;
@@ -29,7 +29,7 @@
   &__logo {
     margin-left: 0.5rem;
 
-    @include tablet {
+    @include medium-tablet {
       margin-left: 0rem;
     }
   }
@@ -37,7 +37,7 @@
   &__nav {
     display: none;
 
-    @include tablet {
+    @include medium-tablet {
       display: flex;
       justify-content: space-between;
       width: 30%;
@@ -47,7 +47,7 @@
   &__navlink {
     display: none;
 
-    @include tablet {
+    @include medium-tablet {
       display: flex;
       font-weight: bold;
     }
