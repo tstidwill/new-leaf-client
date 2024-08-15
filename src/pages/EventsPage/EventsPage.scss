@@ -24,7 +24,17 @@
     align-items: center;
     flex: 1;
     overflow: auto;
-    padding: 0 2rem 2rem;
+    padding: 0 2rem;
+
+    @include medium-tablet {
+      padding: 0;
+    }
+
+    @include large-tablet {
+      width: 80%;
+      max-width: 90rem;
+      padding: 0;
+    }
   }
 
   &__headerbox {
@@ -50,13 +60,12 @@
     width: 100%;
 
     @include medium-tablet {
-      display: flex;
       flex-direction: row;
-      // height: 100%;
-      // width: 100%;
+      display: inline-flex;
       flex-wrap: wrap;
-      gap: 3rem;
+      column-gap: 3rem;
       justify-content: center;
+      overflow: wrap;
     }
   }
 }

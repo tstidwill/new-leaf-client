@@ -7,43 +7,47 @@ import conferenceImage from "../../assets/images/pexels-wildlittlethingsphoto-70
 export default function EventCard({ event, suffix }) {
   return (
     <section className={`eventcard eventcard--${suffix}`} key={event.id}>
-      {event.type === "conference" && (
-        <img
-          src={conferenceImage}
-          alt="Conference event"
-          className={`eventcard__image eventcard__image--${suffix}`}
-        />
-      )}
+      <div
+        className={`eventcard__imagecontainer eventcard__imagecontainer--${suffix}`}
+      >
+        {event.type === "conference" && (
+          <img
+            src={conferenceImage}
+            alt="Conference event"
+            className={`eventcard__image eventcard__image--${suffix}`}
+          />
+        )}
 
-      {event.type === "park_cleanup" && (
-        <img
-          src={pickupImage}
-          alt="Cleaning up park"
-          className={`eventcard__image eventcard__image--${suffix}`}
-        />
-      )}
+        {event.type === "park_cleanup" && (
+          <img
+            src={pickupImage}
+            alt="Cleaning up park"
+            className={`eventcard__image eventcard__image--${suffix}`}
+          />
+        )}
 
-      {event.type === "tree_planting" && (
-        <img
-          src={treeImage}
-          alt="Seed of a plant"
-          className={`eventcard__image eventcard__image--${suffix}`}
-        />
-      )}
+        {event.type === "tree_planting" && (
+          <img
+            src={treeImage}
+            alt="Seed of a plant"
+            className={`eventcard__image eventcard__image--${suffix}`}
+          />
+        )}
 
-      {event.type === "water_cleanup" && (
-        <img
-          src={waterImage}
-          alt="Lake"
-          className={`eventcard__image eventcard__image--${suffix}`}
-        />
-      )}
+        {event.type === "water_cleanup" && (
+          <img
+            src={waterImage}
+            alt="Lake"
+            className={`eventcard__image eventcard__image--${suffix}`}
+          />
+        )}
+      </div>
       <h4 className={`eventcard__title eventcard__title--${suffix}`}>
         {" "}
         {event.name}
       </h4>
       <div className={`eventcard__details eventcard__details--${suffix}`}>
-        <div>
+        <div className={`eventcard__text eventcard__text--${suffix}`}>
           <h5 className="eventcard__date">{event.date}</h5>
           <h5 className="eventcard__location">
             {event.location}, {event.city}

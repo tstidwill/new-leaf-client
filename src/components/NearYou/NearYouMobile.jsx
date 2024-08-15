@@ -7,9 +7,11 @@ export default function NearYouMobile({ leaves }) {
   return (
     <section className="nymobile">
       {leaves && <h3 className="nymobile__header">near you</h3>}
-      <p className="nymobile__response">
-        Sorry, no leaves found near you. Please try a new location.{" "}
-      </p>
+      {leaves && leaves.length === 0 && (
+        <p className="nymobile__response">
+          Sorry, no leaves found near you. Please try a new location.
+        </p>
+      )}
       {leaves &&
         leaves.map((shop) => (
           <section key={shop.id} className="nymobile__card">

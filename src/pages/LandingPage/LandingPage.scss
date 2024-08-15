@@ -256,7 +256,6 @@ input:focus::placeholder {
   @include medium-tablet {
     display: flex;
     justify-content: center;
-    min-height: 20rem;
   }
 
   @include desktop {
@@ -295,7 +294,7 @@ input:focus::placeholder {
     display: flex;
     height: 100%;
     width: 100%;
-    flex-wrap: wrap;
+    overflow: scroll;
     gap: 1rem;
     justify-content: center;
   }
