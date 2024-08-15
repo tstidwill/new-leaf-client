@@ -6,11 +6,10 @@ export default function Header() {
   return (
     <div className="landingpage__header header">
       <div className="header__content">
-        <img
-          src={greenLogo}
-          className="header__logo logo"
-          alt="leaf logo"
-        ></img>
+        <NavLink to="/">
+          <img src={greenLogo} className="header__logo logo" alt="leaf logo" />
+        </NavLink>
+
         <ul className="header__nav">
           <NavLink to="/" className="header__navlink">
             home

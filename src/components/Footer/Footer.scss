@@ -38,4 +38,9 @@
       color: $primary-light;
     }
   }
+
+  &__members {
+    display: flex;
+    gap: 2rem;
+  }
 }

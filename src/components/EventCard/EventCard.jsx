@@ -38,12 +38,17 @@ export default function EventCard({ event, suffix }) {
           className={`eventcard__image eventcard__image--${suffix}`}
         />
       )}
-      <h4 className="eventcard__title"> {event.name}</h4>
-      <div className="eventcard__details">
-        <h5 className="eventcard__date">{event.date}</h5>
-        <h5 className="eventcard__location">
-          {event.location}, {event.city}
-        </h5>
+      <h4 className={`eventcard__title eventcard__title--${suffix}`}>
+        {" "}
+        {event.name}
+      </h4>
+      <div className={`eventcard__details eventcard__details--${suffix}`}>
+        <div>
+          <h5 className="eventcard__date">{event.date}</h5>
+          <h5 className="eventcard__location">
+            {event.location}, {event.city}
+          </h5>
+        </div>
         <a
           href={event.link}
           className={`button--square button--${suffix}`}

@@ -33,7 +33,6 @@ export default function EventsPage() {
           <section className="events__headerbox">
             <h3>Upcoming Events</h3>
           </section>
-
           <section className="events__cards">
             {error && <p>{error} </p>}
             {events &&

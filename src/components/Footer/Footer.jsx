@@ -6,8 +6,10 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer__content">
         <Link className="footer__link">contact us</Link>
-        <Link className="footer__link">register</Link>
-        <Link className="footer__link">login</Link>
+        <div className="footer__members">
+          <Link className="footer__link">register</Link>
+          <Link className="footer__link">login</Link>
+        </div>
       </div>
     </footer>
   );

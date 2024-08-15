@@ -7,13 +7,15 @@
   flex-direction: column;
   flex: 1;
   height: 100%;
-  padding: 0.5rem;
+  padding: 0.75rem;
   box-shadow: 4px 4px 8px rgba(1, 111, 86, 0.2);
+  margin-bottom: 2rem;
 
   @include medium-tablet {
     width: calc(25% - 1rem);
     flex: none;
     height: 10rem;
+    margin-bottom: 0;
   }
 
   @include large-tablet {
@@ -26,6 +28,7 @@
     border: none;
     min-height: 18rem;
     color: $primary-dark;
+    margin-bottom: 0;
   }
 
   &__image {
@@ -41,11 +44,18 @@
 
   &__title {
     margin: 0.25rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid $primary-light;
-    text-align: center;
+    border-bottom: 1px solid $primary-dark;
     height: 40%;
     overflow: scroll;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    &--landing {
+      padding-bottom: 1rem;
+    }
+
     @include large-tablet {
       margin: 0.5rem;
     }
@@ -57,16 +67,21 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    justify-content: space-between;
+    justify-content: space-around;
 
     @include large-tablet {
       margin: 0.5rem;
+    }
+
+    &--landing {
+      padding-bottom: 1rem;
     }
   }
 
   &__date,
   &__location {
     text-align: center;
+    padding: 0.5rem;
     @include large-tablet {
       font-weight: 600;
     }

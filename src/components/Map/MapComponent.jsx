@@ -69,7 +69,6 @@ export default function MapComponent({
   const getLocationsWithinDistance = async (coordinates, selectedType) => {
     try {
       const response = await axios.get(`${API_URL}/leaves`);
-      console.log("Fetched leaves:", response.data);
 
       if (response.data.length > 0) {
         const filteredShops = response.data.filter((shop) => {
@@ -85,7 +84,6 @@ export default function MapComponent({
           return latWithinRange && lngWithinRange && typeMatch;
         });
 
-        console.log("Filtered shops:", filteredShops);
         setLeaves(filteredShops);
         setError(null);
       } else {
@@ -177,7 +175,6 @@ export default function MapComponent({
           </Map>
         )}
       </APIProvider>
-      {/* <NearYou leaves={leaves} /> */}
     </section>
   );
 }

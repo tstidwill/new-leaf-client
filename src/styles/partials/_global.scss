@@ -147,6 +147,7 @@ a {
   color: white;
   background-color: $primary-dark;
   font-family: $special-font;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 
   @include medium-tablet {
     padding: 1rem;
@@ -155,6 +156,9 @@ a {
 
 .button {
   &--square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: $primary-dark;
     color: $primary-light;
     font-family: $font-family;

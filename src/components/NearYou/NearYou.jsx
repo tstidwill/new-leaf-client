@@ -7,6 +7,11 @@ export default function NearYou({ leaves }) {
   return (
     <section className="nearyou">
       {leaves && <h3 className="nearyou__header">near you</h3>}
+      {leaves && leaves.length === 0 && (
+        <p className="nearyou__response">
+          Sorry, no leaves found near you. Please try a new location.
+        </p>
+      )}
       {leaves &&
         leaves.map((shop) => (
           <section key={shop.id} className="nearyou__card">
