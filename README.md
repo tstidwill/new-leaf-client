@@ -1,12 +1,12 @@
 # new leaf :leaves:
 
-BrainStation Software Engineering Bootcamp - Capstone Project
+BrainStation Software Engineering Bootcamp Capstone Project
 
-Please checkout new-leaf.info
+Please feel free to check out my site at **www.new-leaf.info**
 
 ## Overview
 
-Your ultimate companion for sustainable living. Discover nearby community gardens, zero-waste shops and thrift stores with our interactive map. Stay informed and spread awareness on upcoming volunteering opportunities, protests and other green events. Turn over a new leaf for a greener tomorrow.
+Your ultimate companion for sustainable living. Discover nearby **community gardens**, **zero-waste shops** and **thrift stores** with our interactive map. Stay informed and spread awareness on upcoming **volunteering opportunities**, **protests** and **other green events**. Turn over a new leaf for a greener tomorrow.
 
 ### Problem
 
@@ -88,24 +88,24 @@ VITE_GOOGLE_MAPS_API_KEY=your_api_key
 
 #### Landing Page
 
-![](/assets/mockups/Landing_Mobile
+![](src/assets/mockups/Landing_Mobile
 .png)
-![](/assets/mockups/Landing_Desktop
+![](src/assets/mockups/Landing_Desktop
 .png)
 
 #### Map locations & events
 
-![](/assets/mockups/Discover_Mobile.png)
-![](/assets/mockups/Discover_Desktop.png)
+![](src/assets/mockups/Discover_Mobile.png)
+![](src/assets/mockups/Discover_Desktop.png)
 
 #### Events
 
-![](/assets/mockups/Events_Mobile.png)
-![](/assets/mockups/Events_Desktop.png)
+![](src/assets/mockups/Events_Mobile.png)
+![](src/assets/mockups/Events_Desktop.png)
 
 ### Endpoints
 
-**GET /leaves **
+**GET /leaves**
 
 - Get all locations within 1km of inputted postal code
 
@@ -154,21 +154,20 @@ Response:
 
 ## Roadmap
 
-- Design & build client using Vite + React
-- Setup Express server
-- Create database with knex
-- Connect to Google Geocode service
-- Connect to Google Maps API
-- Connect to Google Places API
-- Bug fixes
-- DEMO DAY
-  -> Continued Development (Current Stage)
+- Design & build client using Vite + React :white_check_mark:
+- Setup Express server :white_check_mark:
+- Create database with knex :white_check_mark:
+- Connect to Google Geocode service :white_check_mark:
+- Connect to Google Maps API :white_check_mark:
+- Connect to Google Places API :white_check_mark:
+- Bug fixes :white_check_mark:
+- DEMO DAY:white_check_mark:
+- Continued Development :star: _Current Stage_
 
 ## Next Steps
 
-x Deploy to new-leaf.info
-X Connect to Google Places Details to fetch more location data
-
+- Deploy to new-leaf.info :white_check_mark:
+- Connect to Google Places Details to fetch more location data :white_check_mark:
 - Add login/register functionality
 - Add location functionality to events
 - Add sorting and filtering to events
