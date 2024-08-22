@@ -1,8 +1,8 @@
-# new-leaf.info
-
 # new leaf :leaves:
 
 BrainStation Software Engineering Bootcamp - Capstone Project
+
+Please checkout new-leaf.info
 
 ## Overview
 
@@ -69,6 +69,8 @@ VITE_GOOGLE_MAPS_API_KEY=your_api_key
 - Server libraries:
   - knex
   - express
+  - Netflify
+  - Heroku
 
 ### APIs
 
@@ -84,23 +86,22 @@ VITE_GOOGLE_MAPS_API_KEY=your_api_key
 
 ### Mockups
 
-- Mobile first design
-
 #### Landing Page
 
-![](/assets/mockups/landing_page.png)
+![](/assets/mockups/Landing_Mobile
+.png)
+![](/assets/mockups/Landing_Desktop
+.png)
 
 #### Map locations & events
 
-![](/assets/mockups/discover_page.png)
+![](/assets/mockups/Discover_Mobile.png)
+![](/assets/mockups/Discover_Desktop.png)
 
 #### Events
 
-![](/assets/mockups/events_page.png)
-
-### Data
-
-![](/assets/mockups/draw-sql.png)
+![](/assets/mockups/Events_Mobile.png)
+![](/assets/mockups/Events_Desktop.png)
 
 ### Endpoints
 
@@ -153,7 +154,7 @@ Response:
 
 ## Roadmap
 
-- Create client using Vite + React
+- Design & build client using Vite + React
 - Setup Express server
 - Create database with knex
 - Connect to Google Geocode service
@@ -161,12 +162,16 @@ Response:
 - Connect to Google Places API
 - Bug fixes
 - DEMO DAY
+  -> Continued Development (Current Stage)
 
 ## Next Steps
 
-- Deploy to new-leaf.info
-- Connect to Google Places Details to fetch more location data
+x Deploy to new-leaf.info
+X Connect to Google Places Details to fetch more location data
+
+- Add login/register functionality
 - Add location functionality to events
 - Add sorting and filtering to events
-- Add login/register functionality
 - Add ability to add & share events
+- Add ability to save favorite shops
+- Add contact me page with option to suggest new leaves
